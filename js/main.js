@@ -2,22 +2,12 @@
 define([
            'dojo/_base/declare',
            'dojo/_base/lang',
-           'dojo/dom-class',
-           'dojo/_base/array',
-           'dojo/query',
-           'dojo/_base/window',
-           'dojo/Deferred',
            'dijit/MenuItem',
            'JBrowse/Plugin'
        ],
        function(
            declare,
            lang,
-           domClass,
-           array,
-           query,
-           win,
-           Deferred,
            dijitMenuItem,
            JBrowsePlugin
        ) {
@@ -37,10 +27,7 @@ return declare( JBrowsePlugin,
     },
 
     toggleGridLines: function() {
-
-        query('.jbrowse').toggleClass('nogrid_gridline_minor');
-        query('.jbrowse').toggleClass('nogrid_gridline_major');
-        console.log(query('.jbrowse'));
+        dojo.toggleClass(this.browser.config.containerID, 'removegrid');
     }
 });
 });
