@@ -1,6 +1,6 @@
-div.gridline_minor {
+div.nogrid_gridline_minor {
 	border: none
 }
-div.gridline_major {
+div.nogrid_gridline_major {
 	border: none
 }

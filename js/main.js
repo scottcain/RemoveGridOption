@@ -7,7 +7,7 @@ define([
            'dojo/query',
            'dojo/_base/window',
            'dojo/Deferred',
-            'dijit/MenuItem',
+           'dijit/MenuItem',
            'JBrowse/Plugin'
        ],
        function(
@@ -37,15 +37,10 @@ return declare( JBrowsePlugin,
     },
 
     toggleGridLines: function() {
-        //get all of the gridline divs
 
-        if (array.some(query('.gridline').style('border-style'), 
-                  function(item) { return item == 'none none none solid' ; })) {
-            query('.gridline').style('border-style', 'none none none none'); 
-        }
-        else {
-            query('.gridline').style('border-style', 'none none none solid');
-        }
+        query('.jbrowse').toggleClass('nogrid_gridline_minor');
+        query('.jbrowse').toggleClass('nogrid_gridline_major');
+        console.log(query('.jbrowse'));
     }
 });
 });
