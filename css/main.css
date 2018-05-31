@@ -1,6 +1,10 @@
-div.nogrid_gridline_minor {
+.jbrowse.removegrid .gridline {
 	border: none
 }
-div.nogrid_gridline_major {
+
+/* for pre 1.14 compatibility */
+.removegrid .gridline {
 	border: none
 }
+
+
